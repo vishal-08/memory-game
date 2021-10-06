@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten&display=swap');
 *{
   padding : 0;
   margin: 0;
@@ -16,6 +17,7 @@ body{
   font-size: 5rem;
   text-align: center;
   margin-bottom: 50px;
+  font-family: 'Gluten', cursive;
 
 }
 
@@ -39,16 +41,20 @@ body{
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
-  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  /* box-shadow: 2px 2px 2px rgb(23 139 251); */
+  border-radius: 20%;
 }
 
-/* .grid-item:active {
+.grid-item:active {
   transform: scale(0.97);
   transition: transform .2s;
-} */
+}
 
 .grid-item.flip {
-  transform: rotateY(180deg);
+
+  transform: rotate3d(1, 1, 0, 180deg);
+  
+
 }
 
 .back-face,
@@ -57,11 +63,31 @@ body{
   height: 100%;
   padding: 10px;
   position: absolute;
-  
+  border-radius: 20%;
   background: #1C7CCC;
   backface-visibility: hidden;
 }
 
 .back-face {
-  transform: rotateY(180deg);
+  
+  transform: rotate3d(1, 1, 0, 180deg);
+
+}
+
+#score{
+  position: fixed;
+    top: 150px;
+    right: 240px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Gluten', cursive;
+}
+
+#failed-el{
+  position: absolute;
+    top: 200px;
+    right: 60px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Gluten', cursive;
 }
